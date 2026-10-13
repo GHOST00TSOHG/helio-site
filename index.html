@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HELIO</title>
+<meta name="description" content="HELIO: cinematic interviews with people who have lived it. Watch the episodes.">
+<meta name="theme-color" content="#050507">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="HELIO">
+<meta property="og:description" content="Cinematic interviews with people who have lived it.">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+/* Skip rules run before anything paints.
+   ?intro forces the intro (replays, tests). Otherwise bots / link previews, data-saver & 2G connections
+   and returning visitors (localStorage helio:intro-seen) go straight to the episodes. */
+(function () {
+  var q = new URLSearchParams(location.search), force = q.has('intro') || q.has('hour');
+  var bot = /bot\b|bot\/|crawl|spider|slurp|archiver|facebookexternalhit|embedly|whatsapp|vkshare|lighthouse|pagespeed|prerender|inspectiontool|semrush|ahrefs|bytespider|preview/i.test(navigator.userAgent);
+  var c = navigator.connection, slow = !!(c && (c.saveData || /(^|-)2g$/.test(c.effectiveType || '')));
+  var seen = null; try { seen = localStorage.getItem('helio:intro-seen'); } catch (e) {}
+  window.__helioGo = function (why) {
+    try { sessionStorage.setItem('helio:skip', why); } catch (e) {}
+    location.replace('episodes.html');
+  };
+  if (!force && (bot || slow || seen)) {
+    document.documentElement.className = 'skipping';
+    window.__helioGo(bot ? 'bot' : slow ? 'slow' : 'returning');
+  }
+})();
+</script>
+<link rel="preload" href="./assets/fonts/jost-300-500.woff2" as="font" type="font/woff2" crossorigin>
+  <script type="module" crossorigin src="./assets/index-DRc4DASm.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/arrive-DVbTOSWO.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-BbsKg4U7.css">
+</head>
+<body>
+<main id="hero" class="hero" aria-label="HELIO intro">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="loader" aria-hidden="true"><svg viewBox="-50 -50 100 100"><circle class="track" r="40"/><circle class="prog" r="40" pathLength="100"/></svg></div>
+  <div class="ui">
+    <button id="enter" class="enter" type="button">Enter</button>
+    <a id="skip" class="skip" href="./episodes.html">Skip intro</a>
+  </div>
+  <h1 class="wordmark" aria-label="HELIO">HELIO</h1>
+  <div class="veil" aria-hidden="true"></div>
+</main>
+<noscript><style>.hero{display:none}</style><p class="nojs"><a href="./episodes.html">Enter HELIO</a></p></noscript>
+</body>
+</html>
