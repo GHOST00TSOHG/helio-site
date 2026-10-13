@@ -18,6 +18,7 @@
   var q = new URLSearchParams(location.search), force = q.has('intro') || q.has('hour');
   var bot = /bot\b|bot\/|crawl|spider|slurp|archiver|facebookexternalhit|embedly|whatsapp|vkshare|lighthouse|pagespeed|prerender|inspectiontool|semrush|ahrefs|bytespider|preview/i.test(navigator.userAgent);
   var c = navigator.connection, slow = !!(c && (c.saveData || /(^|-)2g$/.test(c.effectiveType || '')));
+  if (matchMedia('(pointer: coarse)').matches) document.documentElement.classList.add('m');   /* phones / tablets: touch layout */
   var seen = null; try { seen = localStorage.getItem('helio:intro-seen'); } catch (e) {}
   window.__helioGo = function (why) {
     try { sessionStorage.setItem('helio:skip', why); } catch (e) {}
@@ -30,9 +31,9 @@
 })();
 </script>
 <link rel="preload" href="./assets/fonts/jost-300-500.woff2" as="font" type="font/woff2" crossorigin>
-  <script type="module" crossorigin src="./assets/index-DEPcwkkG.js"></script>
+  <script type="module" crossorigin src="./assets/index-Co6Lv0F9.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/arrive-DL65JB3N.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-DqPdJW2B.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-CLYbNRWu.css">
 </head>
 <body>
 <main id="hero" class="hero" aria-label="HELIO intro">
