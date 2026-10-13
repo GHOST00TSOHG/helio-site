@@ -7,15 +7,16 @@
 <meta name="description" content="HELIO: cinematic interviews with people who have lived it. Watch the episodes.">
 <meta name="theme-color" content="#050507">
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 <meta property="og:title" content="HELIO">
 <meta property="og:description" content="Cinematic interviews with people who have lived it.">
 <meta name="twitter:card" content="summary_large_image">
 <script>
 /* Skip rules run before anything paints.
-   ?intro forces the intro (replays, tests). Otherwise bots / link previews, data-saver & 2G connections
+   ?intro forces the intro (replays, tests); so do ?t= / ?seek= (review frames). Otherwise bots / link previews, data-saver & 2G connections
    and returning visitors (localStorage helio:intro-seen) go straight to the episodes. */
 (function () {
-  var q = new URLSearchParams(location.search), force = q.has('intro') || q.has('hour');
+  var q = new URLSearchParams(location.search), force = q.has('intro') || q.has('hour') || q.has('t') || q.has('seek');
   var bot = /bot\b|bot\/|crawl|spider|slurp|archiver|facebookexternalhit|embedly|whatsapp|vkshare|lighthouse|pagespeed|prerender|inspectiontool|semrush|ahrefs|bytespider|preview/i.test(navigator.userAgent);
   var c = navigator.connection, slow = !!(c && (c.saveData || /(^|-)2g$/.test(c.effectiveType || '')));
   if (matchMedia('(pointer: coarse)').matches) document.documentElement.classList.add('m');   /* phones / tablets: touch layout */
@@ -31,9 +32,9 @@
 })();
 </script>
 <link rel="preload" href="./assets/fonts/jost-300-500.woff2" as="font" type="font/woff2" crossorigin>
-  <script type="module" crossorigin src="./assets/index-Co6Lv0F9.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/arrive-DL65JB3N.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-CLYbNRWu.css">
+  <script type="module" crossorigin src="./assets/index-DaNprWQw.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/arrive-CwCq_pZs.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-OuHuNo-k.css">
 </head>
 <body>
 <main id="hero" class="hero" aria-label="HELIO intro">
