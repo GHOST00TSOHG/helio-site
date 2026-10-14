@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1600" width="2400" height="1600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E2024"/><stop offset="1" stop-color="#121316"/></linearGradient></defs>
+<rect width="2400" height="1600" fill="url(#g)"/>
+<g fill="none" stroke="#ECE5D8" stroke-opacity=".34" stroke-width="4.444444444444445"><path d="M71.11111111111111 174.8148148148148V71.11111111111111H174.8148148148148"/><path d="M2328.8888888888887 174.8148148148148V71.11111111111111H2225.185185185185"/><path d="M71.11111111111111 1425.1851851851852V1528.888888888889H174.8148148148148"/><path d="M2328.8888888888887 1425.1851851851852V1528.888888888889H2225.185185185185"/></g>
+<rect x="115.55555555555556" y="115.55555555555556" width="2168.888888888889" height="1368.888888888889" rx="26.666666666666664" fill="none" stroke="#ECE5D8" stroke-opacity=".12" stroke-width="2.962962962962963" stroke-dasharray="20.74074074074074 17.77777777777778"/>
+<g font-family="Jost, Helvetica Neue, Helvetica, Arial, sans-serif" text-anchor="middle" fill="#ECE5D8">
+<text x="1200" y="663.7037037037037" font-size="44.44444444444444" letter-spacing="17.77777777777778" fill="#C9A35E" fill-opacity=".9">PLACEHOLDER</text>
+<text x="1200" y="811.8518518518518" font-size="112.59259259259258" font-weight="300">Episode 06 · Behind the scenes 3</text>
+<text x="1200" y="921.4814814814815" font-size="44.44444444444444" fill-opacity=".55">3:2 · photo to come</text>
+</g>
+</svg>
