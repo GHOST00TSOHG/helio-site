@@ -22,7 +22,7 @@
     try { sessionStorage.setItem('helio:skip', why); } catch (e) {}
     location.replace('episodes.html');
   };
-  if (!force && (bot || slow || seen)) {
+  if (!force && bot) {
     document.documentElement.className = 'skipping';
     window.__helioGo(bot ? 'bot' : slow ? 'slow' : 'returning');
   }
