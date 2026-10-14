@@ -12,14 +12,11 @@
 <meta property="og:description" content="Cinematic interviews with people who have lived it.">
 <meta name="twitter:card" content="summary_large_image">
 <script>
-/* Skip rules run before anything paints.
-   ?intro forces the intro (replays, tests); so do ?t= / ?seek= (review frames). Otherwise bots / link previews, data-saver & 2G connections
-   and returning visitors (localStorage helio:intro-seen) go straight to the episodes. */
 (function () {
   var q = new URLSearchParams(location.search), force = q.has('intro') || q.has('hour') || q.has('t') || q.has('seek');
   var bot = /bot\b|bot\/|crawl|spider|slurp|archiver|facebookexternalhit|embedly|whatsapp|vkshare|lighthouse|pagespeed|prerender|inspectiontool|semrush|ahrefs|bytespider|preview/i.test(navigator.userAgent);
   var c = navigator.connection, slow = !!(c && (c.saveData || /(^|-)2g$/.test(c.effectiveType || '')));
-  if (matchMedia('(pointer: coarse)').matches) document.documentElement.classList.add('m');   /* phones / tablets: touch layout */
+  if (matchMedia('(pointer: coarse)').matches) document.documentElement.classList.add('coarse');
   var seen = null; try { seen = localStorage.getItem('helio:intro-seen'); } catch (e) {}
   window.__helioGo = function (why) {
     try { sessionStorage.setItem('helio:skip', why); } catch (e) {}
@@ -32,9 +29,9 @@
 })();
 </script>
 <link rel="preload" href="./assets/fonts/jost-300-500.woff2" as="font" type="font/woff2" crossorigin>
-  <script type="module" crossorigin src="./assets/index-Bbwz9LAu.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/arrive-DcCUXoRR.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-DM_W4_Yp.css">
+  <script type="module" crossorigin src="./assets/index-BV3iQl-n.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/arrive-CQA6FHAP.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-DVxA7Sma.css">
 </head>
 <body>
 <main id="hero" class="hero" aria-label="HELIO intro">
