@@ -1,0 +1,8 @@
+- This repo holds built assets; edit them directly. The helio-intro source repo is out of sync.
+- Hard rules: never change the logo or loader; no clouds of any kind above the black disc; the intro always plays first; no film grain; no floating star accent.
+- Card hover/tap uses the ENTER-button gold outline effect.
+- Plastic-look checklist: no flat lighting, materials not too smooth, the air feels alive.
+- Targets: iPhone 15 Pro or newer, M4 Macs or newer.
+- Self-test with the Mac's Chromium at phone and laptop size; no console errors.
+- Deploy with a git bundle from a fresh clone.
+- Keep usage low.
