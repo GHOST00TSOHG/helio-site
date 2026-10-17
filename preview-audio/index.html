@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HELIO</title>
+<meta name="description" content="HELIO: cinematic interviews with people who have lived it. Watch the episodes.">
+<meta name="theme-color" content="#050507">
+<link rel="preload" href="./assets/fonts/jost-300-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Helio">
+<meta property="og:description" content="Cinematic interviews with people who have lived it.">
+<meta property="og:image" content="https://ghost00tsohg.github.io/helio-site/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://ghost00tsohg.github.io/helio-site/">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), force = q.has('intro') || q.has('hour') || q.has('t') || q.has('seek');
+  var bot = /bot\b|bot\/|crawl|spider|slurp|archiver|facebookexternalhit|embedly|whatsapp|vkshare|lighthouse|pagespeed|prerender|inspectiontool|semrush|ahrefs|bytespider|preview/i.test(navigator.userAgent);
+  var c = navigator.connection, slow = !!(c && (c.saveData || /(^|-)2g$/.test(c.effectiveType || '')));
+  if (matchMedia('(pointer: coarse)').matches) document.documentElement.classList.add('coarse');
+  var seen = null; try { seen = localStorage.getItem('helio:intro-seen'); } catch (e) {}
+  window.__helioGo = function (why) {
+    try { sessionStorage.setItem('helio:skip', why); } catch (e) {}
+    location.replace('episodes.html');
+  };
+  if (!force && bot) {
+    document.documentElement.className = 'skipping';
+    window.__helioGo(bot ? 'bot' : slow ? 'slow' : 'returning');
+  }
+})();
+</script>
+  <script type="module" crossorigin src="./assets/index-DIInmaU9.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/preload-helper-BmaJr4lw.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-DwBMArN0.css">
+  <link rel="stylesheet" crossorigin href="./assets/loader-Ci5EoInF.css">
+</head>
+<body>
+<main id="hero" class="hero" aria-label="HELIO intro">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="loader hl" aria-hidden="true"></div>
+  <div class="ui">
+    <p class="hint" aria-hidden="true">Tap to begin</p>
+    <button id="enter" class="enter" type="button">Enter</button>
+    <a id="skip" class="skip" href="./episodes.html">Skip intro</a>
+  </div>
+  <h1 class="wordmark" aria-label="HELIO">HELIO</h1>
+  <div class="veil" aria-hidden="true"></div>
+</main>
+<noscript><style>.hero{display:none}</style><p class="nojs"><a href="./episodes.html">Enter HELIO</a></p></noscript>
+</body>
+</html>
